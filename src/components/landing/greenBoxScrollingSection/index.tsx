@@ -54,7 +54,7 @@ const GreenBoxScrollingSection: React.FC = () => {
                 <div className="absolute top-1/2 left-4 lg:left-10 -translate-y-1/2 flex flex-col gap-4">
                     {tabs.map((tab, index) => (
                         <motion.div
-                            key={index}
+                            key={index + tab}
                             className={`cursor-pointer rounded-full transition-all ${index === activeIndex ? "bg-primary400 text-white w-4 h-10" : "bg-gray400 text-gray-300 w-4 h-4"
                                 }`}
                         >

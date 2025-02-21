@@ -2,10 +2,11 @@ import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper";
 import { motion } from "framer-motion";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { ArrowLeftIcon, ArrowRightIcon, ArrowUpIcon } from "@heroicons/react/24/solid";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const data = [
     { id: 0, title: "Towards Climate-Smart Agriculture (CSA): Strategies, obstacles, and visions for a sustainable future", img: "/assets/features/img-1-min.png" },

@@ -19,7 +19,7 @@ const Footer: FC = () => {
             className="relative bg-white "
         >
             <div className='w-full absolute left-0 top-[-50px] px-5'>
-                <div className='z-9 mb-5 bg-gray800 rounded-xl pt-8 lg:pt-16 pb-10 bg-[url(/assets/common/footer-shape.png)] bg-contain bg-repeat-x'>
+                <div className='z-9 mb-5 bg-gray800 rounded-xl pt-8 lg:pt-16 pb-10 bg-[url(/assets/common/footer-shape.png)] bg-contain bg-repeat-y lg: bg-repeat-x'>
                     <div className='container mx-auto lg:px-6 px-5'>
                         <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-6'>
                             <div className='relative lg:col-span-2'>
