@@ -52,7 +52,7 @@ const ReviewsSlider = () => {
                     <SwiperSlide key={index}>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-white rounded-lg shadow-sm border border-gray300 w-full ">
                             <div>
-                                <img src={review.img} className="h-full rounded-lg" alt="kheyti review" />
+                                <img src={review.img} className="h-[200px] lg:h-full rounded-lg" alt="kheyti review" />
                             </div>
                             <div className="lg:p-5 py-10 lg:py-16 relative w-full lg:w-[80%]">
                                 <img src="/assets/reviews/icon.png" className="w-20 h-16 absolute top-2 lg:top-10 lg:left-[-30px]" alt="kheyti review" />
