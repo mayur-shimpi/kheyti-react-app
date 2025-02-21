@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,ts,tsx,jsx}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       fontFamily: {
         cronosMedium: ['Cronos Pro Caption', 'sans-serif'],

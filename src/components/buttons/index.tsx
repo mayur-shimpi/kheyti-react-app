@@ -8,7 +8,7 @@ interface ButtonProps {
 
 export const PrimaryButton: React.FC<ButtonProps> = ({ name, onClick, className }) => {
     return (
-        <button onClick={onClick} className={`bg-primary border border-primary text-white px-8 py-2 rounded-full ${className || ''}`}>
+        <button onClick={onClick} className={`bg-primary border border-primary text-white font-cronosLight px-8 py-2 rounded-full ${className || ''}`}>
             {name}
         </button>
     );
@@ -16,7 +16,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({ name, onClick, className 
 
 export const SecondaryButton: React.FC<ButtonProps> = ({ name, onClick, className }) => {
     return (
-        <button onClick={onClick} className={`bg-white border border-primary text-black500 px-8 py-2 rounded-full ${className || ''}`}>
+        <button onClick={onClick} className={`bg-white border border-primary font-cronosLight text-black500 px-8 py-2 rounded-full ${className || ''}`}>
             {name}
         </button>
     );

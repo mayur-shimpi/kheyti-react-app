@@ -17,7 +17,7 @@ const columnVariants = {
 
 const JoinUsSection = () => {
     return (
-        <section className="py-20 h-[120vh] bg-[url(/assets/landing/join-us-bg.png)] bg-no-repeat bg-cover bg-bottom">
+        <section className="py-10 lg:py-20 h-screen xl:h-[120vh] bg-[url(/assets/landing/join-us-bg.png)] bg-no-repeat bg-cover bg-bottom">
             <div className="container mx-auto px-5 lg:px-40">
                 <motion.div
                     variants={fadeUpVariants}
@@ -26,12 +26,12 @@ const JoinUsSection = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     className="w-full lg:w-[55%]"
                 >
-                    <h3 className="font-semibold text-2xl lg:text-4xl !leading-20">
+                    <h3 className="font-cronosSemiBold text-2xl lg:text-4xl !leading-20">
                     We can, we will… together!
                     </h3>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-60 mt-10">
+                <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-60 mt-6 lg:mt-10">
                     {[0, 1].map((index) => (
                         <motion.div
                             key={index}
@@ -44,16 +44,18 @@ const JoinUsSection = () => {
                         >
                             {index === 0 ? (
                                 <>
-                                    <p className="leading-6">
+                                    <p className="leading-6 font-cronosLight">
                                     At Kheyti, we are on a mission to empower farmers with resilience to overcome climate change, achieve higher incomes, and restore their belief in farming as a thriving profession. This journey calls for partnerships driven by shared values and joint action.
                                     </p>
                                     <p className="leading-5 mt-2">
-                                        <span className="text-primary400 font-semibold text-lg leading-6">
+                                        <span className="text-primary400 font-cronosRegular text-xl leading-6">
                                         Join us in strengthening India’s agrarian roots.
                                         </span>{" "}
                                     </p>
-                                    <PrimaryButton name="Donate" className="mt-8 hover:border-white"/>
-                                    <SecondaryButton name="Collabrate" className="lg:ml-4 mt-8 hover:text-primary hover:border-white"/>
+                                    <div className="mt-5 lg:mt-8 ">
+                                    <PrimaryButton name="Donate" className="hover:border-white"/>
+                                    <SecondaryButton name="Collabrate" className="ml-4 hover:text-primary hover:border-white"/>
+                                    </div>
                                 </>
                             ) : (
                                 <>

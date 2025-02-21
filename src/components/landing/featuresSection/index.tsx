@@ -39,11 +39,11 @@ const FeaturesSection = () => {
     }, []);
 
     return (
-        <section className='bg-[#F6F9F3] py-10 lg:pb-20'>
-            <div className="relative w-full overflow-hidden">
-                <div className="grid lg:grid-cols-5">
+        <section className='bg-[#F6F9F3] py-10 px-6 lg:pb-20'>
+            <div className="container mx-auto relative w-full overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-5">
                     <div></div>
-                    <div className="col-span-4">
+                    <div className="lg:col-span-4">
                         <motion.div
                             variants={fadeUpVariants}
                             initial="hidden"
@@ -51,19 +51,22 @@ const FeaturesSection = () => {
                             viewport={{ once: false, amount: 0.2 }}
                             className="w-full"
                         >
-                            <h3 className="font-semibold text-2xl lg:text-4xl !leading-20">
+                            <h3 className="font-cronosSemiBold text-2xl lg:text-4xl !leading-20">
                                 Features and spotlights
                             </h3>
                         </motion.div>
                         <Swiper
                             onSwiper={(swiper) => (swiperRef.current = swiper)}
                             spaceBetween={20}
-                            slidesPerView={2.8}
+                            // slidesPerView={2.8}
                             loop={false}
                             breakpoints={{
-                                1024: { slidesPerView: 3 },
+                                0: { slidesPerView: 1 }, // Mobile (default) → 1 slide
+                                768: { slidesPerView: 1 },
+                                1024: { slidesPerView: 2 }, // iPad Pro → Still 1 slide
+                                1280: { slidesPerView: 3 }, // Large screens (desktop) → 1.4 slides
                             }}
-                            className="w-full mt-10"
+                            className="w-full mt-5 lg:mt-10"
                         >
                             {data.map((review, index) => (
                                 <SwiperSlide key={index}>
@@ -78,7 +81,7 @@ const FeaturesSection = () => {
                                                 </div>
                                             </div>
                                             <div className="w-full lg:w-[80%] mt-2 ">
-                                                <p className="text-lg text-left text-gray700 font-cronosRegular leading-5">{review.title}</p>
+                                                <p className="text-md lg:text-md text-left text-gray700 font-cronosRegular leading-5 lg:leading-5">{review.title}</p>
                                             </div>
                                         </div>
 
@@ -86,7 +89,7 @@ const FeaturesSection = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="flex items-center mt-10">
+                        <div className="w-full flex items-center justify-between mt-5 lg:mt-10">
                             {/* Progress Bar */}
                             <div className="relative w-[65%] h-[3px] bg-gray500 overflow-hidden">
                                 <div
@@ -95,7 +98,7 @@ const FeaturesSection = () => {
                                 ></div>
                             </div>
                             {/* Prev/Next Buttons */}
-                            <div className="flex items-center lg:ml-20">
+                            <div className="flex items-center lg:ml-20 ml-3">
                                 <button
                                     onClick={() => swiperRef.current?.slidePrev()}
                                     disabled={isBeginning}

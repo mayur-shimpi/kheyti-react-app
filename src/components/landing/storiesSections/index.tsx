@@ -63,11 +63,14 @@ const StoriesSection = () => {
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={20}
-                    slidesPerView={3.4}
+                    // slidesPerView={3.4}
                     loop={true}
                     autoplay={{ delay: 4000, disableOnInteraction: false }}
                     breakpoints={{
-                        1024: { slidesPerView: 4 },
+                        0: { slidesPerView: 1 }, // Mobile (default) → 1 slide
+                        768: { slidesPerView: 1.9 },
+                        1024: { slidesPerView: 2.9 }, // iPad Pro → Still 1 slide
+                        1280: { slidesPerView: 3.9 }, // Large screens (desktop) → 1.4 slides
                     }}
                     className="w-full"
                 >
@@ -75,7 +78,7 @@ const StoriesSection = () => {
                         <SwiperSlide key={index}>
                             <div className="relative bg-white rounded-lg shadow-sm border border-gray300 w-full ">
                                 <div>
-                                    <div className="h-[300px]">
+                                    <div className="h-[320px]">
                                     <img src={review.img} className="h-full w-full rounded-lg" alt="kheyti review" />
                                     </div>
                                     <div className="w-full absolute left-0 bottom-0 py-8 px-2">

@@ -30,20 +30,21 @@ const fadeUpVariants = {
 
 const MilestonesSection = () => {
     return (
-        <section className="bg-gray200 py-20 lg:py-40">
-            <div className="container mx-auto px-5 lg:px-40 max-w-6xl">
-                <div className="text-center">
-                    <motion.div
-                        variants={fadeUpVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.2 }}
-                        className="w-full "
-                    >
-                        <h3 className='font-cronosRegular text-2xl lg:text-5xl !leading-20 '>Milestones of change anchored in gratitude</h3>
-                    </motion.div>
-                </div>
-                <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-10 justify-center">
+        <section className="relative bg-gray200 min-h-screen flex items-center justify-center py-10">
+            <div className="container mx-auto px-5 lg:px-40 max-w-6xl flex flex-col items-center justify-center">
+                {/* Title */}
+                <motion.div
+                    variants={fadeUpVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="text-center "
+                >
+                    <h3 className='font-cronosRegular text-4xl lg:text-5xl !leading-20'>Milestones of change anchored in gratitude</h3>
+                </motion.div>
+
+                {/* Milestones Grid */}
+                <div className="mt-10 px-6 lg:px-0 lg:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
                     {data.map((item, index) => (
                         <motion.div
                             key={index}
@@ -52,10 +53,10 @@ const MilestonesSection = () => {
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.2 }}
                             transition={{ delay: index * 0.2 }}
-                            className="text-left"
+                            className="text-left flex flex-col items-center"
                         >
                             <img src={item.img} alt="milestone" className="mx-auto w-full" />
-                            <div className="py-2 pl-2">
+                            <div className="py-2 text-center">
                                 <h6 className="font-cronosRegular text-xl leading-6">{item.title}</h6>
                                 <p className="text-gray600 font-light text-lg leading-5 w-full mt-2">
                                     {item.desc}

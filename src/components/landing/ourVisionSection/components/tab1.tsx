@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import PlayButton from "../../../icons/PlayButton";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -22,11 +22,6 @@ const visionVideos = [
   "/assets/videos/hero.mp4",
   "/assets/videos/hero.mp4",
 ];
-
-const animationVariants = (delay: number) => ({
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: delay, ease: "easeOut" } },
-});
 
 const VisionImage: FC<{
   src: string;
@@ -74,8 +69,22 @@ const VisionImage: FC<{
     )}
   </div>
 );
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 768);
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  return isMobile;
+};
 
 const Tab1: FC<ActiveIndexProps> = ({ activeIndex }) => {
+  const isMobile = useIsMobile();
+
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   const handlePlay = (index: number) => {
@@ -86,6 +95,15 @@ const Tab1: FC<ActiveIndexProps> = ({ activeIndex }) => {
     setPlayingIndex(null);
   };
 
+  const animationVariants = (delay: number) => ({
+    hidden: { opacity: 0, x: 50 },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { duration: isMobile ? 0 : delay, ease: "easeOut" } 
+    },
+  });
+
   return (
     <div className="relative h-[400px] flex items-center justify-center">
       {[0.1, 0.2, 0.3, 0.5, 0.6].map((delay, index) => (
@@ -93,23 +111,23 @@ const Tab1: FC<ActiveIndexProps> = ({ activeIndex }) => {
           key={index}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
           variants={animationVariants(delay)}
           className={`absolute ${
             index === 0
-              ? "left-10"
+              ? "left-0 lg:left-10"
               : index === 1
-              ? "left-40 z-5"
+              ? "left-0 md:left-20 lg:left-40 z-5"
               : index === 2
               ? "left-auto z-5"
               : index === 3
-              ? "right-40 z-[-1]"
-              : "right-10 z-[-10]"
+              ? "right-0 md:right-20 lg:right-40 z-[-1]"
+              : "right-0 lg:right-10 z-[-10]"
           }`}
         >
           <VisionImage
             src={visionImages[(activeIndex + index) % visionImages.length]}
-            size={["h-[250px]", "h-[350px]", "h-[450px]", "h-[350px]", "h-[250px]"][index]}
+            size={["h-[150px] md:h-[200px] lg:h-[250px]", "h-[250px] md:h-[300px] lg:h-[350px]", "h-[350px] md:h-[450px] lg:h-[450px]", "h-[250px] md:h-[300px] lg:h-[350px]", "h-[150px] md:h-[200px] lg:h-[250px]"][index]}
             showPlayButton={index === 2}
             isPlaying={playingIndex === activeIndex && index === 2}
             onPlay={() => handlePlay(activeIndex)}

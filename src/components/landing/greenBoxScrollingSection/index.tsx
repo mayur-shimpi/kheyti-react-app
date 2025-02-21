@@ -38,9 +38,9 @@ const GreenBoxScrollingSection: React.FC = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative h-[400vh] ">
-            <div className="sticky top-0 h-screen py-10 lg:py-10 bg-gradient-to-b from-[#FFFFFE] to-[#FFFFEA]">
-                <div className="text-center">
+        <section ref={sectionRef} className="relative h-[400vh] bg-gradient-to-b from-[#FFFFFE] to-[#FFFFEA]">
+            <div className="sticky top-0 h-screen flex flex-col items-center justify-center ">
+                <div className="lg:absolute top-10 text-center mb-10 lg:mb-20">
                     <motion.div
                         variants={fadeUpVariants}
                         initial="hidden"
@@ -48,10 +48,10 @@ const GreenBoxScrollingSection: React.FC = () => {
                         viewport={{ once: false, amount: 0.2 }}
                         className="w-full "
                     >
-                        <h3 className='font-cronosRegular text-2xl lg:text-5xl !leading-20 '>Greenhouse-in-a-Box</h3>
+                        <h3 className='font-cronosRegular text-3xl lg:text-5xl !leading-20 '>Greenhouse-in-a-Box</h3>
                     </motion.div>
                 </div>
-                <div className="absolute top-1/2 left-10 -translate-y-1/2 flex flex-col gap-4">
+                <div className="absolute top-1/2 left-4 lg:left-10 -translate-y-1/2 flex flex-col gap-4">
                     {tabs.map((tab, index) => (
                         <motion.div
                             key={index}
@@ -62,8 +62,8 @@ const GreenBoxScrollingSection: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="container mx-auto lg:max-w-6xl mt-20 lg:mt-26 px-5 ">
-                    <div className="grid grid-cols-4 gap-1 items-center">
+                <div className="container mx-auto lg:max-w-6xl px-5 ">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-1 items-center">
                         <div>
                             <TabNavs activeIndex={activeIndex} />
                         </div>

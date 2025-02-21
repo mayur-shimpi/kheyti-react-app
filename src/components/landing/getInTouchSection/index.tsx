@@ -29,29 +29,29 @@ const GetInTouchSection = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     className="w-full "
                 >
-                    <h3 className="text-center font-semibold text-2xl lg:text-4xl !leading-20">
+                    <h3 className="text-center font-semibold text-3xl lg:text-4xl !leading-20">
                         Get In Touch
                     </h3>
                 </motion.div>
                 <div className="mt-20 mx-auto max-w-2xl ">
                     <div className="grid grid-cols-2 gap-6">
                         <div>
-                            <input type="text" placeholder="First Name" className="w-full bg-white text-black500 py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
+                            <input type="text" placeholder="First Name" className="w-full bg-white text-black500 py-3 lg:py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
                         </div>
                         <div>
-                            <input type="text" placeholder="Last Name" className="w-full bg-white text-black500 py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
+                            <input type="text" placeholder="Last Name" className="w-full bg-white text-black500 py-3 lg:py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
                         </div>
                         <div>
-                            <input type="email" placeholder="Email" className="w-full bg-white text-black500 py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
+                            <input type="email" placeholder="Email" className="w-full bg-white text-black500 py-3 lg:py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
                         </div>
                         <div>
-                            <input type="number" placeholder="Contact Number" className="w-full bg-white text-black500 py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
+                            <input type="number" placeholder="Contact Number" className="w-full bg-white text-black500 py-3 lg:py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
                         </div>
                         <div className="col-span-2">
-                            <input type="text" placeholder="Subject" className="w-full bg-white text-black500 py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
+                            <input type="text" placeholder="Subject" className="w-full bg-white text-black500 py-3 lg:py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400" />
                         </div>
                         <div className="col-span-2">
-                            <textarea rows={5} placeholder="Message" className="w-full bg-white text-black500 py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400"></textarea>
+                            <textarea rows={5} placeholder="Message" className="w-full bg-white text-black500 py-3 lg:py-4 px-3 rounded-xl border border-gray500 placeholder-black500 focus:outline-primary400"></textarea>
                         </div>
                     </div>
                     <div className="mt-7">

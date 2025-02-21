@@ -38,7 +38,7 @@ interface activeIndexProps {
 const TabNavs: React.FC<activeIndexProps> = ({activeIndex}) => {
   return (
     <div>
-      <ul>
+      <ul className="hidden lg:block">
         {NavItems.map((item, index) => {
           const IconComponent = item.icon;
           return (

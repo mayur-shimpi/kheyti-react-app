@@ -32,7 +32,7 @@ const FootPrintSection: React.FC = () => {
 
     return (
         <section ref={sectionRef} className="relative h-[300vh] ">
-            <div className="sticky top-0 ">
+            <div className="sticky top-[54px] lg:top-0 h-screen flex items-center justify-center">
                 <motion.div
                     ref={contentRef}
                     key={activeIndex}
@@ -40,18 +40,11 @@ const FootPrintSection: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 0 }}
                     transition={{ duration: 0 }}
+                     className="w-full"
                 >
-                    {
-                        activeIndex === 0 ?
-                            <Tab1 />
-                            :
-                            activeIndex === 1 ?
-                                <Tab2 />
-                                :
-                                activeIndex === 2 ?
-                                    <Tab3 />
-                                    : null
-                    }
+                   {activeIndex === 0 && <Tab1 />}
+                    {activeIndex === 1 && <Tab2 />}
+                    {activeIndex === 2 && <Tab3 />}
                 </motion.div>
             </div>
         </section>

@@ -19,11 +19,11 @@ const Footer: FC = () => {
             className="relative bg-white "
         >
             <div className='w-full absolute left-0 top-[-50px] px-5'>
-                <div className='z-9 mb-5 bg-gray800 rounded-xl pt-16 pb-10 bg-[url(/assets/common/footer-shape.png)] bg-contain bg-repeat-x'>
-                    <div className='container mx-auto lg:px-20 px-5'>
+                <div className='z-9 mb-5 bg-gray800 rounded-xl pt-8 lg:pt-16 pb-10 bg-[url(/assets/common/footer-shape.png)] bg-contain bg-repeat-x'>
+                    <div className='container mx-auto lg:px-6 px-5'>
                         <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-6'>
-                            <div className='relative col-span-2'>
-                                <div className='mb-10'>
+                            <div className='relative lg:col-span-2'>
+                                <div className='mb-6 lg:mb-10'>
                                     <img
                                         src="./assets/common/logo-light.svg"
                                         alt='Logo'
@@ -31,19 +31,19 @@ const Footer: FC = () => {
                                         height={80}
                                     />
                                 </div>
-                                <div className='mb-5 lg:mb-0 text-white'>
+                                <div className='lg:mb-5 lg:mb-0 text-white'>
                                     <h6 className='font-cronosRegular text-lg'> Address</h6>
                                     <p className='flex items-start font-cronosLight leading-5 mt-1 lg:w-[85%]'><MapPinIcon className='size-10 mr-2' /> Kheyti Tech Pvt. Ltd., Plot No. 200, 2nd Cross, Rocktown Colony, Mansoorabad, Hyderabad, Telangana, 500068</p>
                                 </div>
-                                <div className='mb-5 lg:mb-0 text-white mt-10'>
+                                <div className='lg:mb-5 lg:mb-0 text-white mt-10'>
                                     <h6 className='font-cronosRegular text-lg'> Contact us</h6>
                                     <a href='#' className='flex items-start font-cronosLight leading-5 mt-1 cursor-pointer hover:text-primary400'><PhoneIcon className='size-4 mr-2' />(209) 300-2557</a>
                                     <a href='#' className='flex items-start font-cronosLight leading-5 mt-2 cursor-pointer hover:text-primary400'><EnvelopeIcon className='size-4 mr-2' />info@kheyti.com</a>
                                 </div>
-                                <p className='font-cronosLight w-full absolute bottom-0 left-auto text-white text-md '>© Copyright 2025 - All Rights Reserved by Kheyti Inc. & Kheyti Tech Pvt. Ltd.</p>
+                                <p className='hidden lg:block font-cronosLight w-full lg:absolute bottom-0 left-auto text-white text-md '>© Copyright 2025 - All Rights Reserved by Kheyti Inc. & Kheyti Tech Pvt. Ltd.</p>
                             </div>
-                            <div className='relative col-span-2'>
-                                <div className='lg:mt-24 grid lg:grid-cols-2 gap-8'>
+                            <div className='relative lg:col-span-2 py-5 lg:py-0'>
+                                <div className='lg:mt-24 grid lg:grid-cols-2 lg:gap-8'>
                                     <div>
                                         <ul>
                                             <li className='my-2 lg:my-4'><Link to="#" className='text-white font-cronosRegular hover:text-primary400'>Home</Link></li>
@@ -59,7 +59,7 @@ const Footer: FC = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p className='w-full font-cronosLight absolute bottom-0 left-auto text-md text-center text-white mt-20'>Made with 🖤 by Blacksof</p>
+                                <p className='hidden lg:block w-full font-cronosLight xl:absolute bottom-0 left-auto text-md text-center text-white mt-20'>Made with 🖤 by Blacksof</p>
                             </div>
                             <div className=''>
                                 <h6 className='text-white font-cronosRegular text-xl tracking-wide'>Subscribe to our newsletter</h6>
@@ -76,10 +76,16 @@ const Footer: FC = () => {
                                         <Link to='#' className='mr-2'><img src='/assets/icons/youtube.png' alt='youtube' className='w-7' /></Link>
                                     </div>
                                 </div>
-                                <div className='mt-28 lg:ml-2 font-cronosLight'>
+                                <div className='lg:mt-28 lg:ml-2 font-cronosLight'>
                                     <Link to='#' className='text-white hover:text-primary400'>Privacy Policy</Link>
                                     <Link to='#' className='text-white ml-4 hover:text-primary400'>Terms & Condition</Link>
                                 </div>
+                            </div>
+
+                            <div className='block lg:hidden mt-10'>
+                                <p className='font-cronosLight w-full text-white text-md '>© Copyright 2025 - All Rights Reserved by Kheyti Inc. & Kheyti Tech Pvt. Ltd.</p>
+
+                                <p className='w-full font-cronosLight text-md text-center text-white mt-5'>Made with 🖤 by Blacksof</p>
                             </div>
                         </div>
                     </div>
