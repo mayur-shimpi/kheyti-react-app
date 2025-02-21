@@ -16,7 +16,7 @@ const columnVariants = {
 
 const FarmingResolutionSection = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-24">
+    <section className="py-10 pb-0 md:py-20 lg:py-24">
       <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-10">
         {/* Title Section */}
         <motion.div

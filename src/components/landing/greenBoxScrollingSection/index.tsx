@@ -62,7 +62,7 @@ const GreenBoxScrollingSection: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="container mx-auto lg:max-w-6xl px-5 ">
+                <div className="container mx-auto lg:max-w-6xl px-5 mt-10 lg:mt-0">
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-1 items-center">
                         <div>
                             <TabNavs activeIndex={activeIndex} />
