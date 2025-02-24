@@ -46,8 +46,8 @@ const OurVisionSection: React.FC = () => {
 
 
     return (
-        <section ref={sectionRef} className="relative min-h-[500vh] bg-gradient-to-b from-[#FFFFFE] to-[#FFFFEA]">
-            <div className="sticky h-screen top-0 flex flex-col items-center justify-center min-h-screen">
+        <section ref={sectionRef} className="relative min-h-[500vh] bg-gradient-to-b from-[#FFFFFE] to-[#FFFFEA] ">
+            <div className="sticky h-screen top-0 flex flex-col items-center justify-center min-h-screen overflow-hidden">
 
                 <div className="container mx-auto lg:max-w-7xl px-5 md:px-10 lg:px-40">
                     <motion.div

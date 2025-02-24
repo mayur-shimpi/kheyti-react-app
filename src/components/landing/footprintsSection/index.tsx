@@ -32,7 +32,7 @@ const FootPrintSection: React.FC = () => {
 
     return (
         <section ref={sectionRef} className="relative h-[300vh] ">
-            <div className="sticky top-[54px] lg:top-0 h-screen flex items-center justify-center">
+            <div className="sticky top-0 lg:top-0 h-screen flex items-center justify-center">
                 <motion.div
                     ref={contentRef}
                     key={activeIndex}
