@@ -4,6 +4,7 @@ const Hero = () => {
         <section className="relative w-full h-screen overflow-hidden text-center">
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
+                poster="/assets/landing/hero-preview.png"
                 src="/assets/videos/hero.mp4"
                 autoPlay
                 loop
